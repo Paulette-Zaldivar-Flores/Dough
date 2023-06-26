@@ -18,7 +18,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   color: #444;
-  background-color: #70cce8;
+  background-color: #cde5ed;
   height: 100vh;
   padding: 2rem;
 }
@@ -33,11 +33,11 @@ nav {
 .welcome {
   font-size: 1.9rem;
   font-weight: 500;
-  color: orangered;
+  color: rgb(74, 71, 70);
 }
 
 .logo {
-  height: 5.25rem;
+  height: 100px;
 }
 
 .login {
@@ -95,8 +95,8 @@ nav {
   gap: 2rem;
 
   /* NOTE This creates the fade in/out anumation */
-  opacity: 0;
-  transition: all 1s;
+  /* opacity: 0;
+  transition: all 1s; */
 }
 
 .balance {
@@ -215,15 +215,15 @@ nav {
 }
 
 .operation--transfer {
-  background-image: linear-gradient(to top left, #ffb003, #ffcb03);
+  background-image: linear-gradient(to top left, #efce85, #ffeda4);
 }
 
 .operation--loan {
-  background-image: linear-gradient(to top left, #39b385, #9be15d);
+  background-image: linear-gradient(to top left, #a0f7d6, #b2d792);
 }
 
 .operation--close {
-  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+  background-image: linear-gradient(to top left, #b1415d, #f78187);
 }
 
 h2 {
