@@ -123,6 +123,30 @@ const createUsernames = function (accs) {
 createUsernames(accounts);
 console.log(accounts);
 
+let currentAccount;
+btnLogin.addEventListener('click', function (e) {
+  // Prevent form from resubmitting
+  e.preventDefault();
+
+  currentAccount = accounts.find(
+    acc => acc.username === inputLoginUsername.value
+  );
+
+  containerApp.style.opacity = 100;
+
+  console.log(currentAccount);
+
+  if (currentAccount?.pin === Number(inputLoginPin.value)) {
+    console.log('LOGIN');
+    labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
+  }
+});
+
+
+
+
+
+
 
 
 /////////////////////////////////////////////////
@@ -162,22 +186,22 @@ const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 // const withdrawal = movements.filter(mov => mov < 0);
 // console.log(withdrawals);
-console.log (movements);
-//REDUCE METHOD
-const balance = movements.reduce((acc, cur) => acc + cur, 0)
-console.log(balance);
+// console.log (movements);
+// //REDUCE METHOD
+// const balance = movements.reduce((acc, cur) => acc + cur, 0)
+// console.log(balance);
 
-let balance2 = 0;
-for (const mov of movements) balance2 += mov;
-console.log(balance2);
+// let balance2 = 0;
+// for (const mov of movements) balance2 += mov;
+// console.log(balance2);
 
 
-//CHAINING METHODS
+// //CHAINING METHODS
 
-const eurToUsd = 1.1;
+// const eurToUsd = 1.1;
 
-const totalDepositsUSD = movements
-.filter(mov => mov > 0)
-.map(mov => mov * eurToUsd)
-.reduce((acc, mov) => acc + mov, 0);
-console.log(totalDepositsUSD)
+// const totalDepositsUSD = movements
+// .filter(mov => mov > 0)
+// .map(mov => mov * eurToUsd)
+// .reduce((acc, mov) => acc + mov, 0);
+// console.log(totalDepositsUSD)
