@@ -137,6 +137,11 @@ btnLogin.addEventListener('click', function (e) {
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   }
   containerApp.style.opacity = 100;
+
+  // clear input field
+  inputLoginUsername.value = inputLoginPin.value = '';
+  inputLoginPin.blur();
+
   displayMovements(currentAccount.movements);
   calcDisplayBalance(currentAccount.movements);
   calcDisplaySummary(currentAccount.movements);
