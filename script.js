@@ -76,14 +76,14 @@ const displayMovements = function (movements) {
   });
 };
 
-displayMovements(account1.movements);
+
 
 const calcDisplayBalance = function (movements) {
   const balance = movements.reduce((acc, mov) => acc + mov, 0);
   labelBalance.textContent = `${balance} € `;
 };
 
-calcDisplayBalance(account1.movements);
+
 
 const calcDisplaySummary =  function (movements){
   const incomes = movements
@@ -108,16 +108,15 @@ const calcDisplaySummary =  function (movements){
 
 };
 
-calcDisplaySummary(account1.movements)
 
 // Function to compute names (take initials only)looping over the accounts array...
 const createUsernames = function (accs) {
-  accs.forEach(function (acc){
-  acc.username = acc.owner
-    .toLowerCase()
-    .split(" ")
-    .map((name) => name[0])
-    .join(" ");
+  accs.forEach(function (acc) {
+    acc.username = acc.owner
+      .toLowerCase()
+      .split(" ")
+      .map((name) => name[0])
+      .join("");
   });
 };
 createUsernames(accounts);
@@ -129,18 +128,24 @@ btnLogin.addEventListener('click', function (e) {
   e.preventDefault();
 
   currentAccount = accounts.find(
-    acc => acc.username === inputLoginUsername.value
+    (acc) => acc.username === inputLoginUsername.value
   );
-
-  containerApp.style.opacity = 100;
 
   console.log(currentAccount);
 
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
-    console.log('LOGIN');
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   }
+  containerApp.style.opacity = 100;
+  displayMovements(currentAccount.movements);
+  calcDisplayBalance(currentAccount.movements);
+  calcDisplaySummary(currentAccount.movements);
 });
+
+
+
+
+
 
 
 
