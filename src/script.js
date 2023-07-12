@@ -41,6 +41,7 @@ const labelSumInterest = document.querySelector(".summary__value--interest");
 const labelTimer = document.querySelector(".timer");
 
 const containerApp = document.querySelector(".app");
+const welcomeMessage = document.querySelector(".welcome__message");
 const containerMovements = document.querySelector(".movements");
 
 const btnLogin = document.querySelector(".login__btn");
@@ -145,9 +146,8 @@ btnLogin.addEventListener('click', function (e) {
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   }
-
-  // welcomeImage.style.opacity = 0;
   containerApp.style.opacity = 100;
+
 
   // clear input field
   inputLoginUsername.value = inputLoginPin.value = '';

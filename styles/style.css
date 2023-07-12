@@ -30,10 +30,20 @@ nav {
   padding: 0 2rem;
 }
 
+.welcome__message{
+  padding-top: 150px;
+  text-align: center;
+
+}
+
+
+
 .welcome {
-  font-size: 1.9rem;
+  font-size: 1.6rem;
   font-weight: 500;
   color: rgb(74, 71, 70);
+  padding-top: 10px;
+  margin-right: 20px;
 }
 
 .logo {
