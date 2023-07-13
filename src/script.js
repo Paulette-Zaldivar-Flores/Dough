@@ -146,6 +146,7 @@ btnLogin.addEventListener('click', function (e) {
   if (currentAccount?.pin === Number(inputLoginPin.value)) {
     labelWelcome.textContent = `Welcome back, ${currentAccount.owner.split(' ')[0]}`;
   }
+
   containerApp.style.opacity = 100;
 
 
@@ -153,8 +154,10 @@ btnLogin.addEventListener('click', function (e) {
   inputLoginUsername.value = inputLoginPin.value = '';
   inputLoginPin.blur();
 
+
   updateUI(currentAccount);
 });
+
 
 btnTransfer.addEventListener('click', function (e) {
   e.preventDefault();
