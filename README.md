@@ -40,15 +40,17 @@
   <li>User can transfer money</li>
   <li>User can request a loan</li>
   <li>User sort transactions</li>
-<li>Use can deleteir own account/li></ul>
+<li>Use can deleteir own account</li>
+</ul>
 
 
 
 
 ## Screenshots
 
+<img width="1440" alt="Screen Shot 2566-07-12 at 16 49 28" src="https://github.com/Paulette-Zaldivar-Flores/Piggy-Bank/assets/96970580/f200c48a-2a72-4c17-960b-2b2160ed85e7">
 
-<img width="1440" alt="Screen Shot 2566-07-12 at 16 49 28" src="https://github.com/Paulette-Zaldivar-Flores/Dough/assets/96970580/e4afa189-5f41-4451-861d-d3aee67a50bc">
+
 
 
 
