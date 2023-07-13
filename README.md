@@ -40,7 +40,7 @@
   <li>User can transfer money</li>
   <li>User can request a loan</li>
   <li>User sort transactions</li>
-<li>Use can deleteir own account</li>
+<li>Use can delete own account</li>
 </ul>
 
 
